@@ -5,6 +5,7 @@ class Simon
 
   def initialize
     @sequence_length = 1
+    @game_over = false
   end
 
   def play
