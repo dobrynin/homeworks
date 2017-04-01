@@ -39,11 +39,11 @@ class Simon
   end
 
   def round_success_message
-
+    "Success! Round completed. Congratulations!"
   end
 
   def game_over_message
-
+    "Failure! Game over. Better luck next time!"
   end
 
   def reset_game
