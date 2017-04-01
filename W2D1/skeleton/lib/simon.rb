@@ -28,6 +28,12 @@ class Simon
 
   def show_sequence
     add_random_color
+    @seq.each do |color|
+      print color + " "
+      sleep(2)
+    end
+    system("clear")
+    puts
   end
 
   def require_sequence
@@ -46,11 +52,13 @@ class Simon
   end
 
   def round_success_message
-    "Success! Round completed. Congratulations!"
+    puts "Success! Round #{@sequence_length} completed. Congratulations!"
+    sleep(2)
+    system("clear")
   end
 
   def game_over_message
-    "Failure! Game over. Better luck next time!"
+    puts "Failure! Game over. Better luck next time!"
   end
 
   def reset_game
