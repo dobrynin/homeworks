@@ -31,7 +31,14 @@ class Simon
   end
 
   def require_sequence
-
+    @seq.each_with_index do |color, i|
+      puts "Enter color #{i + 1} of the sequence (r for red, b for blue, etc.) "
+      guess = gets.chomp
+      unless guess == color[0]
+        @game_over = true
+        return
+      end
+    end
   end
 
   def add_random_color
@@ -52,3 +59,5 @@ class Simon
     @seq = []
   end
 end
+
+Simon.new.play
